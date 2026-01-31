@@ -8,9 +8,21 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.22/9c08ea24c6eb714e2d6170e8122c069a0ba9aacf/lombok-1.18.22.jar" />
         </processorPath>
-        <module name="Recipe_Management_System.util.main" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-test-results.main" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-tmp.main" />
         <module name="Recipe_Management_System.Recipe_Management_System-task.test" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-annotationProcessor-java.test" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-headers-java.test" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-tmp.test" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-classes-java.test" />
+        <module name="Recipe_Management_System.util.main" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-headers-java.main" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-reports-tests.main" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-classes-java.main" />
         <module name="Recipe_Management_System.util.test" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-reports-tests.test" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-annotationProcessor-java.main" />
+        <module name="Recipe_Management_System.Recipe_Management_System-task-build-test-results.test" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -20,7 +32,7 @@
         <module name="Recipe_Management_System.Recipe_Management_System-task.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21" />
+    <bytecodeTargetLevel target="23" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

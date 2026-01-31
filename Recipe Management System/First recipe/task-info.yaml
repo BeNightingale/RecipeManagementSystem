@@ -7,6 +7,7 @@ files:
     visible: true
     learner_created: false
   - name: test/RecipesApplicationTest.java
+    visible: true
     learner_created: false
   - name: build.gradle
     visible: true
@@ -21,9 +22,5 @@ files:
     visible: true
     learner_created: true
 feedback_link: https://hyperskill.org/projects/180/stages/917/implement#comment
-status: Unchecked
-feedback:
-  message: Please update your SDK to version 23. <a href="open_module_settings">Open
-    Project Settings</a>.
-  time: "Fri, 30 Jan 2026 20:00:16 UTC"
+status: Failed
 record: -1

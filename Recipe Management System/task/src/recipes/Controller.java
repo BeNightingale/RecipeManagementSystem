@@ -7,6 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequestMapping("/api/recipe")
 @AllArgsConstructor
 @RestController
@@ -36,5 +38,27 @@ public class Controller {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Void> updateRecipe(@PathVariable Integer id, @Valid @RequestBody Recipe recipe) {
+        try {
+            recipeService.updateRecipe(id, recipe);
+            return ResponseEntity.noContent().build();
+        } catch (NoObjectInDatabaseException ex) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Recipe>> getRecipies(
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) String name
+    ) {
+        try {
+            return ResponseEntity.ok(recipeService.getRecipes(category, name));
+        } catch (ParameterValidationException ex) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 }

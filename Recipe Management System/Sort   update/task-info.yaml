@@ -12,16 +12,48 @@ files:
     learner_created: false
   - name: src/recipes/Recipe.java
     visible: true
-    learner_created: false
+    learner_created: true
   - name: src/recipes/RecipeService.java
     visible: true
-    learner_created: false
+    learner_created: true
   - name: src/recipes/Controller.java
     visible: true
-    learner_created: false
+    learner_created: true
   - name: test/RecipesApplicationTest.java
     visible: true
     learner_created: false
+  - name: src/recipes/NoObjectInDatabaseException.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/ParameterValidationException.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/180/stages/920/implement#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: "Exception in test #1\n\nCannot start Spring application\n\norg.springframework.beans.factory.BeanDefinitionStoreException:\
+    \ Failed to read candidate component class: file [/Users/beatakazmierczak/IdeaProjects/Recipe\
+    \ Management System/Recipe Management System/task/build/classes/java/main/recipes/Controller.class]\n\
+    \tat org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:484)\n\
+    \tat org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:337)\n\
+    \tat org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277)\n\
+    \tat org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)\n\
+    \tat org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)\n\
+    \tat org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)\n\
+    \tat org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)\n\
+    \tat org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)\n\
+    \tat org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)\n\
+    \tat org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)\n\
+    \tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)\n\
+    \tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)\n\
+    \tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:775)\n\
+    \tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:597)\n\
+    \tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)\n\
+    \tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)\n\
+    \tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455)\n\
+    \tat org.springframework.boot.SpringApplication.run(SpringApplication.java:323)\n\
+    \tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1342)\n\
+    \tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1331)\n\
+    \tat recipes.RecipesApplication.main(RecipesApplication.java:9)"
+  time: "Sat, 31 Jan 2026 22:05:35 UTC"
 record: -1
