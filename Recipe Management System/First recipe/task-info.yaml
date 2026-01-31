@@ -1,0 +1,29 @@
+type: edu
+files:
+  - name: src/recipes/RecipesApplication.java
+    visible: true
+    learner_created: false
+  - name: src/resources/application.properties
+    visible: true
+    learner_created: false
+  - name: test/RecipesApplicationTest.java
+    learner_created: false
+  - name: build.gradle
+    visible: true
+    learner_created: false
+  - name: src/recipes/Recipe.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/RecipeService.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/Controller.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/projects/180/stages/917/implement#comment
+status: Unchecked
+feedback:
+  message: Please update your SDK to version 23. <a href="open_module_settings">Open
+    Project Settings</a>.
+  time: "Fri, 30 Jan 2026 20:00:16 UTC"
+record: -1

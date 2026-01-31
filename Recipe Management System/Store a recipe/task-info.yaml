@@ -1,0 +1,35 @@
+type: edu
+files:
+  - name: src/recipes/RecipesApplication.java
+    visible: true
+    learner_created: false
+  - name: src/resources/application.properties
+    visible: true
+    learner_created: false
+  - name: build.gradle
+    visible: true
+    learner_created: false
+  - name: src/recipes/Recipe.java
+    visible: true
+    learner_created: false
+  - name: src/recipes/RecipeService.java
+    visible: true
+    learner_created: false
+  - name: src/recipes/Controller.java
+    visible: true
+    learner_created: false
+  - name: test/RecipesApplicationTest.java
+    visible: true
+    learner_created: false
+  - name: src/recipes/RecipeRepository.java
+    visible: true
+    learner_created: true
+  - name: src/recipes/Identifier.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/projects/180/stages/919/implement#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 31 Jan 2026 07:58:26 UTC"
+record: -1

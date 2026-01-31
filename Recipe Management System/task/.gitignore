@@ -1,0 +1,13 @@
+# system
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# lokalne ustawienia Gradle/Javy
+local.properties
