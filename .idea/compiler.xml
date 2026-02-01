@@ -32,7 +32,29 @@
         <module name="Recipe_Management_System.Recipe_Management_System-task.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="23" />
+    <bytecodeTargetLevel target="21">
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-classes-java" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-classes-java.main" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-classes-java.test" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-annotationProcessor-java" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-annotationProcessor-java.main" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-annotationProcessor-java.test" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-headers-java" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-headers-java.main" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-generated-sources-headers-java.test" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-reports-tests" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-reports-tests.main" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-reports-tests.test" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-test-results" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-test-results.main" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-test-results.test" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-tmp" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-tmp.main" target="23" />
+      <module name="Recipe_Management_System.Recipe_Management_System-task-build-tmp.test" target="23" />
+      <module name="Recipe_Management_System.util" target="23" />
+      <module name="Recipe_Management_System.util.main" target="23" />
+      <module name="Recipe_Management_System.util.test" target="23" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

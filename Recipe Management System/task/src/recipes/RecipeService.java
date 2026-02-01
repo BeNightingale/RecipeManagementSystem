@@ -32,18 +32,22 @@ public class RecipeService {
             );
         }
         if (!isCategoryEmpty) {
-            log.info("kategoria niepusta! {}", category);
+            log.info("Category is not empty: {}.", category);
             if (StringUtils.isBlank(category)) {
                 throw new ParameterValidationException("Parameter category is blank!");
             }
-            List<Recipe> found = recipeRepository.findRecipesByCategoryIgnoreCaseOrderByDateDesc(category);
-            log.info("Znaleziono dla category {} przepisy: {}", category, found);
-            return recipeRepository.findRecipesByCategoryIgnoreCaseOrderByDateDesc(category);
+            final List<Recipe> found = recipeRepository.findRecipesByCategoryIgnoreCaseOrderByDateDesc(category);
+            log.info("For category {} found recipes: {}", category, found);
+            return found;
         }
+        log.info("Name is not empty: {}.", name);
         if (StringUtils.isBlank(name)) {
+            log.info("Name ({}) expected to be not empty but is blank!", category);
             throw new ParameterValidationException("Parameter name is blank!");
         }
-        return recipeRepository.findRecipesByNameLikeIgnoreCaseOrderByDateDesc(name);
+        final List<Recipe> found = recipeRepository.findRecipesByNameLikeIgnoreCaseOrderByDateDesc(name);
+        log.info("For name {} found recipes: {}", name, found);
+        return found;
     }
 
     Recipe getRecipe(Integer id) {

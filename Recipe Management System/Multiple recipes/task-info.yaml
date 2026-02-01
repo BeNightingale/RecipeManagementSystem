@@ -12,15 +12,6 @@ files:
   - name: build.gradle
     visible: true
     learner_created: false
-  - name: src/recipes/Recipe.java
-    visible: true
-    learner_created: false
-  - name: src/recipes/RecipeService.java
-    visible: true
-    learner_created: false
-  - name: src/recipes/Controller.java
-    visible: true
-    learner_created: false
 feedback_link: https://hyperskill.org/projects/180/stages/918/implement#comment
 status: Failed
 record: -1

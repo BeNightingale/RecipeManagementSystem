@@ -50,7 +50,7 @@ public class Controller {
         }
     }
 
-    @GetMapping("/search")
+    @GetMapping("/search/")
     public ResponseEntity<List<Recipe>> getRecipies(
             @RequestParam(required = false) String category,
             @RequestParam(required = false) String name

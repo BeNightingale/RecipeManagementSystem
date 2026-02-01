@@ -18,6 +18,17 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
 sourceSets.main.resources.srcDirs = ["src/resources"]
 
 dependencies {
