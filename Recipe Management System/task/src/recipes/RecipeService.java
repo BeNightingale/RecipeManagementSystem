@@ -21,7 +21,7 @@ public class RecipeService {
     private UserRepository userRepository;
 
     Identifier addRecipe(Recipe recipe, String userEmail) {
-        final User currentUser = checkUserExistence(userEmail);
+        final User currentUser = findUser(userEmail);
         recipe.setDate(LocalDateTime.now());
         recipe.setUser(currentUser);
         final Recipe savedRecipe = recipeRepository.save(recipe);
@@ -59,11 +59,10 @@ public class RecipeService {
     }
 
     Recipe getRecipe(Integer id) {
-        return recipeRepository.findById(id).orElse(null);
+        return findRecipeIfExists(id);
     }
 
     void deleteRecipe(int id, String userEmail) {
-        //checkUserExistence(userEmail);
         final Recipe recipe = findRecipeIfExists(id);
         checkIsUserRecipeAuthor(recipe, userEmail);
         log.info("Deleting recipe: {}.", recipe);
@@ -71,7 +70,6 @@ public class RecipeService {
     }
 
     void updateRecipe(int id, Recipe recipeDataToUpdate, String userEmail) {
-      //  checkUserExistence(userEmail);
         final Recipe recipe = findRecipeIfExists(id);
         checkIsUserRecipeAuthor(recipe, userEmail);
         recipe.updateRecipeEntity(recipeDataToUpdate);
@@ -84,12 +82,12 @@ public class RecipeService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatusCode.valueOf(404), "No recipe with id %d found.".formatted(id)));
     }
 
-    private User checkUserExistence(String passedUserEmail) {
+    private User findUser(String passedUserEmail) {
         final Optional<User> currentUser = userRepository.findUserByEmail(passedUserEmail);
         if (currentUser.isEmpty()) {
             log.error("User with email {} not found", passedUserEmail);
-            throw new ResponseStatusException(
-                    HttpStatusCode.valueOf(401), "User with email %s not found".formatted(passedUserEmail)
+            throw new NoObjectInDatabaseException(
+                    "User with email %s not found".formatted(passedUserEmail)
             );
         }
         return currentUser.get();

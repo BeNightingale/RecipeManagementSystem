@@ -26,23 +26,24 @@ public class Controller {
             @Valid @RequestBody Recipe recipe,
             Authentication authentication
     ) {
-    //    try {
+        try {
             final Identifier identifier = recipeService.addRecipe(recipe, authentication.getName());
             return ResponseEntity.ok(identifier);
-     //   } catch (ResponseStatusException ex) {
-     //       return ResponseEntity.status(401).build();
-      //  }
+        } catch (NoObjectInDatabaseException ex) {
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @GetMapping(value = "/recipe/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Recipe> getRecipe(
             @PathVariable Integer id
     ) {
-        final Recipe recipe = recipeService.getRecipe(id);
-        if (recipe == null) {
+        try {
+            final Recipe recipe = recipeService.getRecipe(id);
+            return ResponseEntity.ok(recipe);
+        } catch (ResponseStatusException ex) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(recipe);
     }
 
     @DeleteMapping("/recipe/{id}")
@@ -96,7 +97,6 @@ public class Controller {
         final int statusCode = ex.getStatusCode().value();
         return switch (statusCode) {
             case 404 -> ResponseEntity.notFound().build();
-         //   case 401 -> ResponseEntity.status(401).build();
             case 403 -> ResponseEntity.status(403).build();
             default -> ResponseEntity.internalServerError().build();
         };

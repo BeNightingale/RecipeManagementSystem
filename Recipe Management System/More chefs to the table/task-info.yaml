@@ -36,14 +36,12 @@ files:
   - name: src/recipes/UserDetailsServiceImpl.java
     visible: true
     learner_created: true
+  - name: src/recipes/GlobalExceptionHandler.java
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/180/stages/921/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #5
-
-    POST /api/register should respond with status code 400, responded: 401
-
-    Response body:
-  time: "Fri, 06 Feb 2026 16:09:01 UTC"
+  message: Congratulations!
+  time: "Fri, 06 Feb 2026 18:51:21 UTC"
 record: -1
