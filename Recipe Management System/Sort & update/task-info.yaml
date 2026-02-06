@@ -1,5 +1,4 @@
 type: edu
-custom_name: Sort & update
 files:
   - name: src/recipes/RecipesApplication.java
     visible: true
@@ -12,14 +11,20 @@ files:
     learner_created: false
   - name: src/recipes/Recipe.java
     visible: true
-    learner_created: true
+    learner_created: false
   - name: src/recipes/RecipeService.java
     visible: true
-    learner_created: true
+    learner_created: false
   - name: src/recipes/Controller.java
     visible: true
-    learner_created: true
+    learner_created: false
   - name: test/RecipesApplicationTest.java
+    visible: true
+    learner_created: false
+  - name: src/recipes/RecipeRepository.java
+    visible: true
+    learner_created: false
+  - name: src/recipes/Identifier.java
     visible: true
     learner_created: false
   - name: src/recipes/NoObjectInDatabaseException.java
@@ -28,15 +33,6 @@ files:
   - name: src/recipes/ParameterValidationException.java
     visible: true
     learner_created: true
-  - name: src/recipes/Identifier.java
-    visible: true
-    learner_created: true
-  - name: src/recipes/RecipeRepository.java
-    visible: true
-    learner_created: true
 feedback_link: https://hyperskill.org/projects/180/stages/920/implement#comment
 status: Solved
-feedback:
-  message: Congratulations!
-  time: "Sun, 01 Feb 2026 08:56:05 UTC"
 record: -1

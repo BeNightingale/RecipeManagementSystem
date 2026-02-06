@@ -53,6 +53,11 @@ public class Recipe {
     @Column(name = "directions", nullable = false)
     private List<String> directions = new ArrayList<>();
 
+    @Setter
+    @JsonIgnore
+    @ManyToOne()
+    private User user;
+
 
     void updateRecipeEntity(Recipe recipeDataToUpdate) {
         this.name = recipeDataToUpdate.name;
